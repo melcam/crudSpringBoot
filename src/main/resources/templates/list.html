@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Telefono</th>
+        <th>Editar</th>
+        <th>Eliminar</th>
+    </tr></thead>
+    <tbody>
+    <tr th:each="contact, iterStat: ${employees}">
+        <td th:text="${iterStat.count}"></td>
+        <th th:text="${contact.name}"></th>
+        <th th:text="${contact.phone}"></th>
+        <th ></th>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
